@@ -1,0 +1,40 @@
+.timer {
+    display: flex;
+    font-size: 200px;
+    line-height: 1;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.795);
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin: 30px;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.795);
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    background: $blue;
+    border: none;
+    color: lighten($dark-blue, 60%);
+    font-size: 2.7rem;
+    padding: 0.4rem $s-size;
+    font-weight: 300;
+    line-height: 1;
+    text-decoration: none;
+    border: 0.2rem solid $off-white;
+    border-radius: 0.3rem;
+    margin-left: 0.2rem;
+    height: 5.2rem;
+    @media (min-width: $desktop-breakpoint) {
+        display: inline-block;
+        margin-left: 1.2rem;
+        height: 5.2rem;
+    }
+}
