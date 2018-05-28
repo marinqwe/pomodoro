@@ -6,9 +6,7 @@ class Tomato extends React.Component {
         this.state = {
             timer: false,
             totalTime: 25 * 60,
-            reset: false,
-            title: 'LETS GOOOOOOOO',
-            hideButton: false
+            title: 'LETS GOOOOOOOO'
         };
     }
     componentDidMount() {}
@@ -21,9 +19,7 @@ class Tomato extends React.Component {
         clearInterval(this.interval);
         this.setState(() => ({
             timer: false,
-            reset: true,
-            title: 'Haha jk not final dont give up pls',
-            hideButton: false
+            title: 'Haha jk not final dont give up pls'
         }));
     };
     resetTimer = () => {
@@ -31,9 +27,7 @@ class Tomato extends React.Component {
         this.setState(() => ({
             totalTime: 25 * 60,
             timer: false,
-            reset: false,
-            title: 'LETS GOOOOOOO',
-            hideButton: false
+            title: 'LETS GOOOOOOO'
         }));
     };
     countDown = () => {
@@ -41,7 +35,6 @@ class Tomato extends React.Component {
         this.setState(() => ({
             totalTime: totalTime - 1,
             title: 'ITS THE FINAL COUNTDOOOOWN',
-            hideButton: true,
             timer: true
         }));
     };
@@ -52,7 +45,7 @@ class Tomato extends React.Component {
         return (time < 10 ? '0' : '') + time;
     };
     render() {
-        const { title, totalTime, hideButton, timer, reset } = this.state;
+        const { title, totalTime, timer } = this.state;
         const minutes = this.formatTime(Math.floor(totalTime / 60));
         const seconds = this.formatTime(totalTime - minutes * 60);
         console.log(minutes, seconds);
